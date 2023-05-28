@@ -156,10 +156,9 @@ export default class ManageMedicineComponent extends Component {
                     </div>
                   </div>
                   ):""}
-<<<<<<< HEAD
+
                   <h2>All Medicines</h2>
-=======
-                  <h2>All Companies</h2>
+
                 </div>
                 <div className="body table-responsive">
                   <table id="company" className="table table-hover">
