@@ -17,11 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls.static import static
-
+from backend.views import index
 from backend import settings
 from rest_framework import routers
 from DjangoMedical import views
-from DjangoMedical.views import CompanyNameViewset, MedicineNameViewset,CompanyOnlyViewset,EmployeeBankByEIDViewset,EmployeeSalaryByEIDViewset,index
+from DjangoMedical.views import CompanyNameViewset, MedicineNameViewset,CompanyOnlyViewset,EmployeeBankByEIDViewset,EmployeeSalaryByEIDViewset
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 router = routers.DefaultRouter()
@@ -37,7 +37,7 @@ router.register("customer_request",views.CustomerRequestViewSet, basename="custo
 router.register("home_api",views.HomeApiViewSet, basename="home_api")
 
 urlpatterns = [
-    path('', index),
+    path('',index),
     path('home', index),
     path('company', index),
     path('companydetails/:id', index),

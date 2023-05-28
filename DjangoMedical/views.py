@@ -14,8 +14,6 @@ from DjangoMedical.serializers import CompanySerializer,CompanyBankSerializer,Me
 
 # Create your views here. 
 
-def index(request):
-    return render(request, 'index.html')
 
 
 class CompanyViewSet(viewsets.ViewSet):

@@ -138,7 +138,7 @@ export default class Sidebar extends Component {
           ;
           <div className="legal">
             <div className="copyright">
-              © 2023 - 2025{" "}
+              © 2023 - 2024{" "}
               <br/>
               <a href="#"> Ragavi Medical Management System</a>.
             </div>
