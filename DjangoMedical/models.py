@@ -92,7 +92,6 @@ class EmployeeSalary(models.Model):
     added_on = models.DateTimeField(auto_now_add=True)
     objects = models.Manager()
  
-
  
 class CustomerRequest(models.Model):
     id = models.AutoField(primary_key=True)
