@@ -156,10 +156,7 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR,'frontend/medicalapp/build/static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://44.203.141.46"
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Base url to serve media files
 MEDIA_URL = '/media/'
