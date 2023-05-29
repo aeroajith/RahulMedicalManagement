@@ -13,7 +13,8 @@ from DjangoMedical.models import Company,CompanyBank,Medicine,MedicineDetails,Co
 from DjangoMedical.serializers import CompanySerializer,CompanyBankSerializer,MedicineSerializer,MedicineDetailSerializer,MedicineDetailSerializerSimple,CompanyAccountSerializer,EmployeeSerializer,EmployeeBankSerializer,EmployeeSalarySerializer,CustomerSerializer,BillSerializer,BillDetailsSerializer,CustomerRequestSerializer
 
 # Create your views here. 
-
+def index(request):
+    return render(request,'index.html')
 
 
 class CompanyViewSet(viewsets.ViewSet):
