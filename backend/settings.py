@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u6z2_!g%*22$m^xmhh1z$p0odvuz+mls1=5$%4$#+c^!9oj%g%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS=['*']
 
 
 # Application definition
@@ -155,6 +155,8 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR,'frontend/medicalapp/build/static')]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 
 CORS_ORIGIN_ALLOW_ALL = True
 
