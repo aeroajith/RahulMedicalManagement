@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u6z2_!g%*22$m^xmhh1z$p0odvuz+mls1=5$%4$#+c^!9oj%g%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS=['http://44.203.141.46/','*']
+ALLOWED_HOSTS=['*']
 
 
 # Application definition
@@ -158,7 +158,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+"https://www.ragavimedical.online/",
+"http://127.0.0.1:8000/",
+ 
+]
 
 # Base url to serve media files
 MEDIA_URL = '/media/'
