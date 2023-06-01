@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u6z2_!g%*22$m^xmhh1z$p0odvuz+mls1=5$%4$#+c^!9oj%g%
 DEBUG = True
 
 ALLOWED_HOSTS=['*']
-CORS_ALLOW_ALL_ORIGINS = True
+
 
 
 # Application definition
@@ -159,21 +159,15 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR,'frontend/medicalapp/build/static')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOW_HEADERS = "*"
 CORS_ALLOWED_ORIGINS = ['https://www.ragavimedical.online',
-                        "http://127.0.0.1:8000"]
-
-CSRF_TRUSTED_ORIGINS = ['https://www.ragavimedical.online',
                         "http://127.0.0.1:8000"
                         ]
 
-CORS_ORIGIN_WHITELIST = [
-     'https://www.ragavimedical.online',
-     "http://127.0.0.1:8000"
 
-]
 
-CORS_ALLOW_CREDENTIALS =  True
+
+
+
 # Base url to serve media files
 MEDIA_URL = '/media/'
 
