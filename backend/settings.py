@@ -159,7 +159,7 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR,'frontend/medicalapp/build/static')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-
+CORS_ALLOW_HEADERS = "*"
 CORS_ALLOWED_ORIGINS = ['*']
 
 CSRF_TRUSTED_ORIGINS = ['*']
