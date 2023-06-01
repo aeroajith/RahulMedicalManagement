@@ -160,14 +160,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOW_HEADERS = "*"
-CORS_ALLOWED_ORIGINS = ['*']
+CORS_ALLOWED_ORIGINS = ['https://www.ragavimedical.online',
+                        "http://127.0.0.1:8000"]
 
-CSRF_TRUSTED_ORIGINS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://www.ragavimedical.online',
+                        "http://127.0.0.1:8000"
+                        ]
 
 CORS_ORIGIN_WHITELIST = [
-     'https://www.ragavimedical.online'
+     'https://www.ragavimedical.online',
+     "http://127.0.0.1:8000"
+
 ]
 
+CORS_ALLOW_CREDENTIALS =  True
 # Base url to serve media files
 MEDIA_URL = '/media/'
 
