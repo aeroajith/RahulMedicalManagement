@@ -11,8 +11,9 @@ class APIHandler{
         if(AuthHandler.checkTokenExpiry()){
             try{
             var response = await axios.post(Config.refreshApiUrl,{
-                refresh: AuthHandler.getRefreshToken()
-            }) 
+                refresh: AuthHandler.getRefreshToken(),
+                
+            })
             reactLocalStorage.set("token",response.data.access) 
         }
         catch(error){
