@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u6z2_!g%*22$m^xmhh1z$p0odvuz+mls1=5$%4$#+c^!9oj%g%
 DEBUG = True
 
 ALLOWED_HOSTS=['*']
-CORS_ORIGIN_ALLOW_ALL=True
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -161,8 +161,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOWED_ORIGINS = [
-"https://www.ragavimedical.online",
-"http://127.0.0.1:8000",
+       "https://www.ragavimedical.online",
+       
  
 ]
 
