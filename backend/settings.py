@@ -166,6 +166,10 @@ CORS_ALLOWED_ORIGINS = [
  
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+        "https://www.ragavimedical.online",
+    ]
+
 # Base url to serve media files
 MEDIA_URL = '/media/'
 
