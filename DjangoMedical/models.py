@@ -69,7 +69,6 @@ class Customer(models.Model):
     added_on = models.DateTimeField(auto_now_add=True)
     objects = models.Manager()
 
-
 class Bill(models.Model):
     id = models.AutoField(primary_key=True)
     customer_id = models.ForeignKey(Customer, on_delete=models.CASCADE) 
