@@ -41,9 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'DjangoMedical',
+    "corsheaders",
     'rest_framework',
     'rest_framework.authtoken',
-    "corsheaders",
+    
 
 ]
 
@@ -62,10 +63,10 @@ REST_FRAMEWORK={
 MIDDLEWARE = [
    
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "django.middleware.common.CommonMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -161,14 +162,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ALLOWED_ORIGINS = [
-                       "http://ragavimedical.online",
-                       "http://192.168.43.216:3000",
-                       
+                       "http://ragavimedical.online"
                         ]
 
 
+
+CSRF_TRUSTED_ORIGINS = ["http://ragavimedical.online"]
 
 
 
