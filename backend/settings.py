@@ -164,6 +164,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
                        "http://ragavimedical.online",
+                       "http://192.168.43.216:3000",
                        
                         ]
 
