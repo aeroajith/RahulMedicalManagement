@@ -11,7 +11,9 @@ class APIHandler{
         if(AuthHandler.checkTokenExpiry()){
             try{
             var response = await axios.post(Config.refreshApiUrl,{
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }},{
+                headers: { 'Access-Control-Allow-Origin': '*',
+                    'Content-Type': 'application/x-www-form-urlencoded' 
+                }},{
                 refresh: AuthHandler.getRefreshToken(),
                 
             })
