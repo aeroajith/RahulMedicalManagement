@@ -10,7 +10,8 @@ class APIHandler{
     async checkLogin(){
         if(AuthHandler.checkTokenExpiry()){
             try{
-            var response = await axios.post(Config.refreshApiUrl,{
+            var response = await axios.post(Config.refreshApiUrl,
+                Header().Set("Access-Control-Allow-Origin", "*"),{
                 refresh: AuthHandler.getRefreshToken(),
                 
             })
