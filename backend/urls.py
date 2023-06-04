@@ -51,7 +51,7 @@ urlpatterns = [
     path('employeedetails/:id', index),
     path('generatebill', index),
     path('customer_request', index),
-    
+    path('/*', index),
     
     path('admin/', admin.site.urls),
     path('api/',include(router.urls)),
