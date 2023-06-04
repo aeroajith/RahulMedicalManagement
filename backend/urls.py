@@ -37,8 +37,8 @@ router.register("customer_request",views.CustomerRequestViewSet, basename="custo
 router.register("home_api",views.HomeApiViewSet, basename="home_api")
 
 urlpatterns = [
-    path('*', index),
-    path('/',index),
+    
+    path('',index),
     path('home', index),
     path('company', index),
     path('companydetails/:id', index),
@@ -51,6 +51,7 @@ urlpatterns = [
     path('employeedetails/:id', index),
     path('generatebill', index),
     path('customer_request', index),
+    path('*', index),
     
     path('admin/', admin.site.urls),
     path('api/',include(router.urls)),
