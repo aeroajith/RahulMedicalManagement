@@ -14,7 +14,7 @@ export default class Navbar extends Component {
               aria-expanded="false"
             ></a>
             <a href="#" className="bars" onClick={this.props.onBarClick}></a>
-            <a className="navbar-brand" href="index.html">
+            <a className="navbar-brand" href="#">
               Ragavi Medical Management System
             </a>
           </div>

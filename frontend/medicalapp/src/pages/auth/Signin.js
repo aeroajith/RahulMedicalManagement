@@ -167,11 +167,8 @@ export default class Signin extends Component {
                     </div>
                   </div>
                   <div className="row m-t-15 m-b--20">
-                    <div className="col-xs-6">
-                      <a href="sign-up.html">Register Now!</a>
-                    </div>
-                    <div className="col-xs-6 align-right">
-                      <a href="forgot-password.html">Forgot Password?</a>
+                    <div className="col-xs-12">
+                      <a href="#">Need to login contact the administrator!</a>
                     </div>
                   </div>
                   {this.getMessage()}
