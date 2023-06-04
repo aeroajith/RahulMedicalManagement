@@ -38,7 +38,7 @@ router.register("home_api",views.HomeApiViewSet, basename="home_api")
 
 urlpatterns = [
     path('*', index),
-    path('',index),
+    path('/',index),
     path('home', index),
     path('company', index),
     path('companydetails/:id', index),
