@@ -28,7 +28,7 @@ ReactDOM.render(
   <Switch>
       
       <Route exact path="/" component={Signin}/>
-      <Route exact path="*" component={PageNotFound}/>
+      <Route path="*" component={PageNotFound}/>
           <Route
           
             exact path={Config.logoutPageUrl} component={Logout}/>
