@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Signin from "./pages/auth/Signin";
 import Logout from "./pages/auth/Logout";
-import PageNotFound from "./pages/PageNotFound";
+
 import { PrivateRouteNew } from "./utils/PrivateRouteNew";
 import HomeComponent from "./pages/HomeComponent";
 import CompanyComponent from "./pages/CompanyComponent";
@@ -68,8 +68,7 @@ ReactDOM.render(
           <PrivateRouteNew
             exact path="/customer_request" activepage="7" page={CustomerRequest}/>
 
-          <PrivateRouteNew
-            exact path="/*"  component={PageNotFound}/>
+          
    </Switch>
   </Router>,
   document.getElementById("root")
