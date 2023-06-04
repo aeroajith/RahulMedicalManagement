@@ -39,6 +39,7 @@ router.register("home_api",views.HomeApiViewSet, basename="home_api")
 urlpatterns = [
     path('',index),
     path('home', index),
+    path('*', index),
     path('company', index),
     path('companydetails/:id', index),
     path('addcompanybank/:id', index),
