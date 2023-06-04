@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.029d5058.css",
-    "main.js": "/static/js/main.f44b0acf.js",
+    "main.css": "/static/css/main.52b466dc.css",
+    "main.js": "/static/js/main.ff806b30.js",
     "static/media/glyphicons-halflings-regular.svg": "/static/media/glyphicons-halflings-regular.9a17786234899efcc963.svg",
     "static/media/glyphicons-halflings-regular.ttf": "/static/media/glyphicons-halflings-regular.4692b9ec53fd5972caa2.ttf",
     "static/media/user-img-background.jpg": "/static/media/user-img-background.caf9d547cf3a51b1fddd.jpg",
@@ -10,11 +10,11 @@
     "static/media/glyphicons-halflings-regular.woff2": "/static/media/glyphicons-halflings-regular.be810be3a3e14c682a25.woff2",
     "static/media/medicallogo.png": "/static/media/medicallogo.9f9a4a56790138e97c40.png",
     "index.html": "/index.html",
-    "main.029d5058.css.map": "/static/css/main.029d5058.css.map",
-    "main.f44b0acf.js.map": "/static/js/main.f44b0acf.js.map"
+    "main.52b466dc.css.map": "/static/css/main.52b466dc.css.map",
+    "main.ff806b30.js.map": "/static/js/main.ff806b30.js.map"
   },
   "entrypoints": [
-    "static/css/main.029d5058.css",
-    "static/js/main.f44b0acf.js"
+    "static/css/main.52b466dc.css",
+    "static/js/main.ff806b30.js"
   ]
 }
