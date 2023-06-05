@@ -78,6 +78,7 @@ export default class HomeComponent extends Component {
 				yValueFormatString: "₹#,###",
 				xValueFormatString: "DD MMM YYYY",
 				type: "line",
+        indexLabelFontSize: 16,
 				dataPoints:profitdatalist,
 			}]
 		}
@@ -97,6 +98,7 @@ export default class HomeComponent extends Component {
 				yValueFormatString: "₹#,###",
 				xValueFormatString: "DD MMM YYYY",
 				type: "line",
+        indexLabelFontSize: 16,
 				dataPoints:selldatalist,
 			}]
 		}
