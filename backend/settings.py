@@ -170,6 +170,7 @@ CORS_ALLOWED_ORIGINS = [
                         ]
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://ragavimedical.online",
     "http://127.0.0.1:8000"
 ]
 
