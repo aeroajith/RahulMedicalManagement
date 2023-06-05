@@ -651,20 +651,16 @@ class HomeApiViewSet(viewsets.ViewSet):
         employee_count_serializer = EmployeeSerializer(employee_count, many=True, context={"request":request})
 
         bill_details = BillDetails.objects.all()
-
         qty = BillDetails.objects.aggregate(Sum('quantity'))
         for val in qty.values():   
          total_qty = val
         #print(total_qty)
-        
-        sell_amount = 0
-        buy_amount = 0
 
         for bill in bill_details:
-            buy_amount= float(buy_amount + float(bill.medicine_id.buy_price))*int(total_qty)
-            sell_amount= float((sell_amount + (float(bill.medicine_id.sell_price))+((float(bill.medicine_id.sell_price))*((float(bill.medicine_id.c_gst)+float(bill.medicine_id.s_gst))/100))))*int(total_qty)
+            buy_amount=  float(bill.medicine_id.buy_price)*int(total_qty)
+            sell_amount= float(((float(bill.medicine_id.sell_price))+((float(bill.medicine_id.sell_price))*((float(bill.medicine_id.c_gst)+float(bill.medicine_id.s_gst))/100))))*int(total_qty)
         profit_amount = sell_amount - buy_amount
-        
+       
 
         customer_request_pending = CustomerRequest.objects.filter(status = False)
         customer_request_pending_serializer = CustomerRequestSerializer(customer_request_pending, many=True, context={"request":request})
@@ -678,20 +674,16 @@ class HomeApiViewSet(viewsets.ViewSet):
         current_date_7days = current_date_7days.strftime("%Y-%m-%d")
 
         bill_details_today = BillDetails.objects.filter(added_on__date=current_date)
-        
+
         qty = bill_details_today.aggregate(Sum('quantity'))
         for val in qty.values():   
           todays_total_qty = val
         #print(todays_total_qty)
-        sell_amount_today = 0
-        buy_amount_today = 0
-        
         for bill in bill_details_today:
-            
-            buy_amount_today= float(buy_amount_today + float(bill.medicine_id.buy_price))*int(todays_total_qty)
-            sell_amount_today= float((sell_amount_today + (float(bill.medicine_id.sell_price))+((float(bill.medicine_id.sell_price))*((float(bill.medicine_id.c_gst)+float(bill.medicine_id.s_gst))/100))))*int(todays_total_qty)
+            buy_amount_today= float(bill.medicine_id.buy_price)*int(todays_total_qty)
+            sell_amount_today= float(((float(bill.medicine_id.sell_price))+((float(bill.medicine_id.sell_price))*((float(bill.medicine_id.c_gst)+float(bill.medicine_id.s_gst))/100))))*int(todays_total_qty)
         profit_amount_today = sell_amount_today - buy_amount_today
-        print(sell_amount_today)
+        
 
         medicine_expire = Medicine.objects.filter(expire_date__range=[current_date,current_date_7days])                 
         medicine_expire_serializer = MedicineSerializer(medicine_expire,many=True, context={"request":request})
@@ -710,18 +702,12 @@ class HomeApiViewSet(viewsets.ViewSet):
             qty = bill_data.aggregate(Sum('quantity'))
             for val in qty.values():   
               chart_total_qty = val
-            #print(chart_total_qty) 
-            
-            profit_amt_inner = 0
-            sell_amt_inner = 0
-            buy_amt_inner = 0
-
+            print(chart_total_qty) 
             for billsingle in bill_data:
-                
-                buy_amt_inner= float(buy_amt_inner + float(billsingle.medicine_id.buy_price))*int(chart_total_qty)
-                sell_amt_inner= float((sell_amt_inner + (float(billsingle.medicine_id.sell_price))+((float(billsingle.medicine_id.sell_price))*(float(billsingle.medicine_id.c_gst)+(float(billsingle.medicine_id.s_gst)))/100)))*int(chart_total_qty)
-            profit_amt_inner = sell_amt_inner - buy_amt_inner
-
+                #print(billsingle.medicine_id.sell_price)
+                buy_amt_inner= float(billsingle.medicine_id.buy_price)*int(chart_total_qty)
+                sell_amt_inner= float(((float(billsingle.medicine_id.sell_price))+((float(billsingle.medicine_id.sell_price))*((float(billsingle.medicine_id.c_gst)+float(billsingle.medicine_id.s_gst))/100))))*int(chart_total_qty)
+                profit_amt_inner = sell_amt_inner - buy_amt_inner
             profit_chart_list.append({"date":acces_date,"amt":profit_amt_inner})
             sell_chart_list.append({"date":acces_date,"amt":sell_amt_inner})
             buy_chart_list.append({"date":acces_date,"amt":buy_amt_inner})
