@@ -193,7 +193,7 @@ export default class HomeComponent extends Component {
           </div>
           <div className="row clearfix">
             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div className="info-box bg-pink hover-expand-effect">
+              <div className="info-box bg-red hover-expand-effect">
                 <div className="icon">
                   <i className="material-icons">supervisor_account</i>
                 </div>
@@ -212,7 +212,7 @@ export default class HomeComponent extends Component {
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div className="info-box bg-cyan hover-expand-effect">
+              <div className="info-box bg-indigo hover-expand-effect">
                 <div className="icon">
                   <i className="material-icons">trending_up</i>
                 </div>
@@ -231,7 +231,7 @@ export default class HomeComponent extends Component {
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div className="info-box bg-light-green hover-expand-effect">
+              <div className="info-box bg-purple hover-expand-effect">
                 <div className="icon">
                   <i className="material-icons">donut_small</i>
                 </div>
@@ -251,7 +251,7 @@ export default class HomeComponent extends Component {
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div className="info-box bg-orange hover-expand-effect">
+              <div className="info-box bg-deep-purple hover-expand-effect">
                 <div className="icon">
                   <i className="material-icons">today</i>
                 </div>
@@ -272,7 +272,7 @@ export default class HomeComponent extends Component {
           </div>
           <div className="row clearfix">
             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div className="info-box bg-pink hover-expand-effect">
+              <div className="info-box bg-blue hover-expand-effect">
                 <div className="icon">
                   <i className="material-icons">beenhere</i>
                 </div>
@@ -291,7 +291,7 @@ export default class HomeComponent extends Component {
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div className="info-box bg-cyan hover-expand-effect">
+              <div className="info-box bg-light-blue hover-expand-effect">
                 <div className="icon">
                   <i className="material-icons">add_alert</i>
                 </div>
@@ -310,7 +310,7 @@ export default class HomeComponent extends Component {
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div className="info-box bg-light-green hover-expand-effect">
+              <div className="info-box bg-teal hover-expand-effect">
                 <div className="icon">
                   <i className="material-icons">forum</i>
                 </div>
@@ -329,7 +329,7 @@ export default class HomeComponent extends Component {
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div className="info-box bg-orange hover-expand-effect">
+              <div className="info-box bg-green hover-expand-effect">
                 <div className="icon">
                   <i className="material-icons">timeline</i>
                 </div>
