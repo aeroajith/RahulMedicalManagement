@@ -169,7 +169,9 @@ CORS_ALLOWED_ORIGINS = [
                         ]
 
 
-
+CSRF_COOKIE_DOMAIN = [
+    "http://ragavimedical.online"
+]
 CSRF_TRUSTED_ORIGINS = [
     "http://ragavimedical.online"
 ]
