@@ -655,7 +655,8 @@ class HomeApiViewSet(viewsets.ViewSet):
         for val in qty.values():   
          total_qty = val
         #print(total_qty)
-
+        buy_amount = 0
+        sell_amount = 0
         for bill in bill_details:
             buy_amount=  float(bill.medicine_id.buy_price)*int(total_qty)
             sell_amount= float(((float(bill.medicine_id.sell_price))+((float(bill.medicine_id.sell_price))*((float(bill.medicine_id.c_gst)+float(bill.medicine_id.s_gst))/100))))*int(total_qty)
@@ -679,6 +680,8 @@ class HomeApiViewSet(viewsets.ViewSet):
         for val in qty.values():   
           todays_total_qty = val
         #print(todays_total_qty)
+        buy_amount_today = 0
+        sell_amount_today = 0
         for bill in bill_details_today:
             buy_amount_today= float(bill.medicine_id.buy_price)*int(todays_total_qty)
             sell_amount_today= float(((float(bill.medicine_id.sell_price))+((float(bill.medicine_id.sell_price))*((float(bill.medicine_id.c_gst)+float(bill.medicine_id.s_gst))/100))))*int(todays_total_qty)
@@ -703,6 +706,9 @@ class HomeApiViewSet(viewsets.ViewSet):
             for val in qty.values():   
               chart_total_qty = val
             print(chart_total_qty) 
+
+            buy_amt_inner = 0
+            sell_amt_inner = 0
             for billsingle in bill_data:
                 #print(billsingle.medicine_id.sell_price)
                 buy_amt_inner= float(billsingle.medicine_id.buy_price)*int(chart_total_qty)
