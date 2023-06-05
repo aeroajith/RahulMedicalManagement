@@ -77,7 +77,7 @@ export default class HomeComponent extends Component {
 			data: [{
 				yValueFormatString: "₹#,###",
 				xValueFormatString: "DD MMM YYYY",
-				type: "spline",
+				type: "line",
 				dataPoints:profitdatalist,
 			}]
 		}
@@ -96,7 +96,7 @@ export default class HomeComponent extends Component {
 			data: [{
 				yValueFormatString: "₹#,###",
 				xValueFormatString: "DD MMM YYYY",
-				type: "spline",
+				type: "line",
 				dataPoints:selldatalist,
 			}]
 		}
